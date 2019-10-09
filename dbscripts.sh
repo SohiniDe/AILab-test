@@ -3,7 +3,7 @@ db2 connect to scopedb
 db2 SET SCHEMA "SCOPE"
 for folder_name in tablespace tables aliases riconstraints functions views functions aliases index storedproc triggers scripts
 do
-	echo "Looking for DB sql files in the $folder_name"
+	echo "Looking for any DB sql files in the $folder_name"
 	cd $folder_name
 	touch test.txt test
     ls *.sql >> test.txt
